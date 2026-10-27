@@ -15,8 +15,12 @@ public class Task {
             this.description = description;
         }
 
+        public void setCompleted(boolean completed){
+            this.completed = completed;
+        }
 
-        public long getID(){
+
+        public long getId(){
             return this.id;
         }
 
@@ -34,7 +38,7 @@ public class Task {
 
 
 
-        Task(long id, String title, String description){
+        public Task(long id, String title, String description){
             this.id = id;
             this.title = title;
             this.description = description;
