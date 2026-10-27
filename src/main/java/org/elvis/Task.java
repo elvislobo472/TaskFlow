@@ -16,5 +16,13 @@ public class Task {
         }
 
 
+        public void
+
+        Task(long id, String title, String description){
+            this.id = id;
+            this.title = title;
+            this.description = description;
+
+        }
 
 }
