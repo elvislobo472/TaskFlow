@@ -9,20 +9,21 @@ public class Main {
             String taskTitle = task.getTitle();
             String taskDescription = task.getDescription();
 
-            boolean taskStatus = task.isCompleted();
+
 
         System.out.println("Task ID: "+taskId);
         System.out.println("Title: "+taskTitle);
         System.out.println("Description: "+taskDescription);
-        System.out.println("Status: " +taskStatus);
+        System.out.println("Status: " +task.isCompleted());
 
-        task.setCompleted(true);
 
         System.out.println();
 
         System.out.println("Task ID: "+taskId);
         System.out.println("Title: "+taskTitle);
         System.out.println("Description: "+taskDescription);
+
+        task.markCompleted();
         System.out.println("Status: " + task.isCompleted());
 
 
