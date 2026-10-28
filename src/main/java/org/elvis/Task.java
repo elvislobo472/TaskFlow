@@ -15,9 +15,9 @@ public class Task {
             this.description = description;
         }
 
-        public void setCompleted(boolean completed){
-            this.completed = completed;
-        }
+//        public void setCompleted(boolean completed){
+//            this.completed = completed;
+//        }
 
 
         public long getId(){
@@ -34,6 +34,10 @@ public class Task {
 
         public boolean isCompleted(){
             return this.completed;
+        }
+
+        public void markCompleted(){
+            this.completed = true;
         }
 
 
