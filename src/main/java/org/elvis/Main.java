@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Description: "+taskDescription);
 
         task.markCompleted();
-        System.out.println("Status: " + task.isCompleted());
+        System.out.println("Status after Completion: " + task.isCompleted());
 
 
         }
