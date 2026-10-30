@@ -22,7 +22,7 @@ public class TaskService {
             System.out.println("Title: "+task.getTitle());
             System.out.println("Description: "+task.getDescription());
             System.out.println("Status: " + task.isCompleted());
-            System.out.println("===================================");
+            System.out.println("==============================================");
         }
     }
 
