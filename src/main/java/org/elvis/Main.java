@@ -30,10 +30,14 @@ public class Main {
 
 
 
-        TaskService list = new TaskService();
+        TaskService taskService = new TaskService();
 
-        list.addTask(new Task(2, "Learn Python", "Lists, Tuples, Dictionary"));
-        list.addTask(new Task(3,"Learn Javascript", "Async Coding"));
+        taskService.addTask(new Task(1, "Learn Python", "Lists, Tuples, Dictionary"));
+        taskService.addTask(new Task(2,"Learn Javascript", "Async Coding"));
+
+
+
+
 
 
 
