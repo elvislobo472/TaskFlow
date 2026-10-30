@@ -28,14 +28,16 @@ public class Main {
         task.markCompleted();
         System.out.println("Status after Completion: " + task.isCompleted());
 
+        System.out.println();
 
 
         TaskService taskService = new TaskService();
 
         taskService.addTask(new Task(1, "Learn Python", "Lists, Tuples, Dictionary"));
         taskService.addTask(new Task(2,"Learn Javascript", "Async Coding"));
+        taskService.addTask(new Task(3, "Learn Linux", "Shell Variables"));
 
-
+        taskService.displayAllTask();
 
 
 
