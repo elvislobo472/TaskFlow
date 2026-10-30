@@ -11,6 +11,8 @@ public class Main {
 
 
 
+
+
         System.out.println("Task ID: "+taskId);
         System.out.println("Title: "+taskTitle);
         System.out.println("Description: "+taskDescription);
@@ -25,6 +27,14 @@ public class Main {
 
         task.markCompleted();
         System.out.println("Status after Completion: " + task.isCompleted());
+
+
+
+        TaskService list = new TaskService();
+
+        list.addTask(new Task(2, "Learn Python", "Lists, Tuples, Dictionary"));
+        list.addTask(new Task(3,"Learn Javascript", "Async Coding"));
+
 
 
         }
