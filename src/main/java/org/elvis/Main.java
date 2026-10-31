@@ -37,11 +37,21 @@ public class Main {
         taskService.addTask(new Task(2,"Learn Javascript", "Async Coding"));
         taskService.addTask(new Task(3, "Learn Linux", "Shell Variables"));
 
-        taskService.displayAllTask();
+        taskService.displayAllTasks();
+
+
+        System.out.println();
+
+        taskService.getAndMarkCompleted(2);
+
+        taskService.displayAllTasks();
 
 
 
 
 
-        }
+
+
+
+    }
     }
