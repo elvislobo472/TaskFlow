@@ -37,11 +37,12 @@ public class TaskService {
         for(Task task : taskList){
             if(task.getId() == id){
                 task.markCompleted();
-                break;
-            }else{
-                System.out.println("Task with the mentioned ID not found.");
+                System.out.println("Task marked as completed!");
+                return;
             }
         }
+
+        System.out.println("Task with the mentioned ID not found.");
 
     }
 
