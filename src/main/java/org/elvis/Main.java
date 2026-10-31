@@ -47,6 +47,11 @@ public class Main {
         taskService.displayAllTasks();
 
 
+        taskService.getAndMarkCompleted(100);
+
+        taskService.displayAllTasks();
+
+
 
 
 
