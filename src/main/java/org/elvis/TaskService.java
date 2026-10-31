@@ -1,6 +1,5 @@
 package org.elvis;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class TaskService {
@@ -16,7 +15,13 @@ public class TaskService {
     // taskList.add(new Task(1, "Learn Java", "Practice OOP"));  //But the function makes it reusable
 
 
-    public void displayAllTask(){
+    public void displayAllTasks(){
+
+        if (taskList.isEmpty()){
+            System.out.println("No tasks available.");
+            return;
+        }
+
         for(Task task : taskList){
             System.out.println("Task ID: "+ task.getId());
             System.out.println("Title: "+task.getTitle());
@@ -24,6 +29,20 @@ public class TaskService {
             System.out.println("Status: " + task.isCompleted());
             System.out.println("==============================================");
         }
+    }
+
+
+    public void getAndMarkCompleted(int id){
+
+        for(Task task : taskList){
+            if(task.getId() == id){
+                task.markCompleted();
+                break;
+            }else{
+                System.out.println("Task with the mentioned ID not found.");
+            }
+        }
+
     }
 
 
