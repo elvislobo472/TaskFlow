@@ -49,8 +49,14 @@ public class TaskService {
 
     public void deleteTask(int id){
         for(Task task : taskList){
-
+            if(task.getId() == id){
+                taskList.remove(task);
+                System.out.println("Task deleted successfully");
+                return;
+            }
         }
+
+
     }
 
 
