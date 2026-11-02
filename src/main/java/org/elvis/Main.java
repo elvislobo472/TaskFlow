@@ -42,18 +42,30 @@ public class Main {
 
         System.out.println();
 
-        taskService.getAndMarkCompleted(2);
+//        taskService.getAndMarkCompleted(2);
+//
+//        taskService.displayAllTasks();
+//
+//
+//        taskService.getAndMarkCompleted(100);
+//
+//        taskService.displayAllTasks();
+//
+//
+//        System.out.println();
+
+
+        taskService.deleteTask(2);
 
         taskService.displayAllTasks();
 
 
-        taskService.getAndMarkCompleted(100);
+        System.out.println();
+
+
+        taskService.deleteTask(100);
 
         taskService.displayAllTasks();
-
-
-
-
 
 
 
