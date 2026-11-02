@@ -8,6 +8,13 @@ public class TaskService {
 
 
     public void addTask(Task task){
+        for (Task existingTask : taskList){
+            if(existingTask.getId() == task.getId()){
+                System.out.println("Task with this ID already exists");
+                return;
+            }
+        }
+
         taskList.add(task);
     }
 
