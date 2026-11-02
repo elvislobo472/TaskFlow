@@ -37,12 +37,12 @@ public class TaskService {
         for(Task task : taskList){
             if(task.getId() == id){
                 task.markCompleted();
-                System.out.println("Task marked as completed!");
+                System.out.println("********Task marked as completed!********");
                 return;
             }
         }
 
-        System.out.println("Task with the mentioned ID not found.");
+        System.out.println("########Task with the mentioned ID not found########");
 
     }
 
@@ -51,12 +51,29 @@ public class TaskService {
         for(Task task : taskList){
             if(task.getId() == id){
                 taskList.remove(task);
-                System.out.println("Task deleted successfully");
+                System.out.println("********Task deleted successfully********");
                 return;
             }
         }
 
-        System.out.println("Task with the mentioned ID could not be found.");
+        System.out.println("########Task with the mentioned ID could not be found########");
+
+    }
+
+
+    public void updateTask(int id, String newTitle, String newDescription){
+
+        for(Task task : taskList){
+            if(task.getId() == id){
+                task.setTitle(newTitle);
+                task.setDescription(newDescription);
+
+                System.out.println("********Task details updated  successfully********");
+                return;
+            }
+        }
+
+        System.out.println("########Task with the mentioned ID could not be found.########");
 
     }
 
