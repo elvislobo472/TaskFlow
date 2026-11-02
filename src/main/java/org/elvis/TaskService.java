@@ -11,12 +11,14 @@ public class TaskService {
         for (Task existingTask : taskList){
             if(existingTask.getId() == task.getId()){
                 System.out.println("########Task with this ID already exists########");
+                System.out.println();
                 return;
             }
         }
 
         taskList.add(task);
         System.out.println("********Task added successfully********");
+        System.out.println();
     }
 
     //Another way to do it directly
@@ -27,6 +29,7 @@ public class TaskService {
 
         if (taskList.isEmpty()){
             System.out.println("No tasks available.");
+            System.out.println();
             return;
         }
 
@@ -36,6 +39,7 @@ public class TaskService {
             System.out.println("Description: "+task.getDescription());
             System.out.println("Status: " + task.isCompleted());
             System.out.println("==============================================");
+            System.out.println();
         }
     }
 
@@ -46,11 +50,13 @@ public class TaskService {
             if(task.getId() == id){
                 task.markCompleted();
                 System.out.println("********Task marked as completed!********");
+                System.out.println();
                 return;
             }
         }
 
         System.out.println("########Task with the mentioned ID not found########");
+        System.out.println();
 
     }
 
@@ -60,11 +66,13 @@ public class TaskService {
             if(task.getId() == id){
                 taskList.remove(task);
                 System.out.println("********Task deleted successfully********");
+                System.out.println();
                 return;
             }
         }
 
         System.out.println("########Task with the mentioned ID could not be found########");
+        System.out.println();
 
     }
 
@@ -77,11 +85,13 @@ public class TaskService {
                 task.setDescription(newDescription);
 
                 System.out.println("********Task details updated  successfully********");
+                System.out.println();
                 return;
             }
         }
 
         System.out.println("########Task with the mentioned ID could not be found.########");
+        System.out.println();
 
     }
 
