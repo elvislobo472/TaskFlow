@@ -10,12 +10,13 @@ public class TaskService {
     public void addTask(Task task){
         for (Task existingTask : taskList){
             if(existingTask.getId() == task.getId()){
-                System.out.println("Task with this ID already exists");
+                System.out.println("########Task with this ID already exists########");
                 return;
             }
         }
 
         taskList.add(task);
+        System.out.println("********Task added successfully********");
     }
 
     //Another way to do it directly
