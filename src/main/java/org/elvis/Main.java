@@ -55,6 +55,8 @@ public class Main {
 //        System.out.println();
 
 
+        //Deletion of Task
+
         taskService.deleteTask(2);
 
         taskService.displayAllTasks();
@@ -66,6 +68,26 @@ public class Main {
         taskService.deleteTask(100);
 
         taskService.displayAllTasks();
+        System.out.println();
+
+
+
+
+        //Updating task
+
+        taskService.updateTask(3, "Learn CI/CD", "Start with Github Actions");
+
+
+
+        taskService.displayAllTasks();
+
+        System.out.println();
+
+        taskService.updateTask(30, "Learn CI/CD", "Start with Github Actions");
+        System.out.println();
+
+        taskService.displayAllTasks();
+
 
 
 
