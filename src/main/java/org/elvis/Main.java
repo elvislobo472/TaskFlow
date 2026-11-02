@@ -19,7 +19,6 @@ public class Main {
         System.out.println("Status: " +task.isCompleted());
 
 
-        System.out.println();
 
         System.out.println("Task ID: "+taskId);
         System.out.println("Title: "+taskTitle);
@@ -28,7 +27,7 @@ public class Main {
         task.markCompleted();
         System.out.println("Status after Completion: " + task.isCompleted());
 
-        System.out.println();
+
 
 
         TaskService taskService = new TaskService();
@@ -40,7 +39,7 @@ public class Main {
         taskService.displayAllTasks();
 
 
-        System.out.println();
+
 
 //        taskService.getAndMarkCompleted(2);
 //
@@ -52,7 +51,6 @@ public class Main {
 //        taskService.displayAllTasks();
 //
 //
-//        System.out.println();
 
 
         //Deletion of Task
@@ -62,13 +60,12 @@ public class Main {
         taskService.displayAllTasks();
 
 
-        System.out.println();
+
 
 
         taskService.deleteTask(100);
 
         taskService.displayAllTasks();
-        System.out.println();
 
 
 
@@ -81,13 +78,22 @@ public class Main {
 
         taskService.displayAllTasks();
 
-        System.out.println();
+
 
         taskService.updateTask(30, "Learn CI/CD", "Start with Github Actions");
-        System.out.println();
+
 
         taskService.displayAllTasks();
 
+
+        taskService.addTask(new Task(2, "Learn Docker", "Read about Containerization"));
+
+        taskService.displayAllTasks();
+
+
+        taskService.addTask(new Task(1, "Learn Docker", "Read about Containerization"));
+
+        taskService.displayAllTasks();
 
 
 
