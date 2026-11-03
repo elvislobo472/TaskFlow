@@ -72,28 +72,37 @@ public class Main {
 
         //Updating task
 
-        taskService.updateTask(3, "Learn CI/CD", "Start with Github Actions");
-
-
+//        taskService.updateTask(3, "Learn CI/CD", "Start with Github Actions");
+//
+//
+//
+//        taskService.displayAllTasks();
+//
+//
+//
+//        taskService.updateTask(30, "Learn CI/CD", "Start with Github Actions");
+//
+//
+//        taskService.displayAllTasks();
+//
+//
+//        taskService.addTask(new Task(2, "Learn Docker", "Read about Containerization"));
+//
+//        taskService.displayAllTasks();
+//
+//
+//        taskService.addTask(new Task(1, "Learn Docker", "Read about Containerization"));   // Should throw error since ID 1 already exists
 
         taskService.displayAllTasks();
 
 
 
-        taskService.updateTask(30, "Learn CI/CD", "Start with Github Actions");
+        //Input Validation
 
-
-        taskService.displayAllTasks();
-
-
-        taskService.addTask(new Task(2, "Learn Docker", "Read about Containerization"));
+        taskService.addTask(new Task(4, "Docker", "Read about Containerization"));
 
         taskService.displayAllTasks();
 
-
-        taskService.addTask(new Task(1, "Learn Docker", "Read about Containerization"));
-
-        taskService.displayAllTasks();
 
 
 
