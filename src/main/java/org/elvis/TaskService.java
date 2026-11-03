@@ -18,8 +18,8 @@ public class TaskService {
 
 
         //input validation
-        if(task.getTitle().isBlank()){
-            System.out.println("########Task title cannot be empty########");
+        if(task.getTitle().isBlank() || task.getDescription().isBlank()){
+            System.out.println("########Task title and Description cannot be empty########");
             System.out.println();
             return;
         }
