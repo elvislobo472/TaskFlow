@@ -99,6 +99,9 @@ public class Main {
 
         //Input Validation
 
+        taskService.addTask(new Task(100, "Test", " "));
+
+
         taskService.addTask(new Task(4, "Docker", "Read about Containerization"));
 
         taskService.displayAllTasks();
