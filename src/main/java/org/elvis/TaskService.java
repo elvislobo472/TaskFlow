@@ -16,6 +16,14 @@ public class TaskService {
             }
         }
 
+
+        //input validation
+        if(task.getTitle().isBlank()){
+            System.out.println("########Task title cannot be empty########");
+            System.out.println();
+            return;
+        }
+
         taskList.add(task);
         System.out.println("********Task added successfully********");
         System.out.println();
