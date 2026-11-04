@@ -10,6 +10,9 @@ public class TaskRepository {
     public void save(Task task){
         taskList.add(task);
     }
+    //Another way to do it directly
+    // taskList.add(new Task(1, "Learn Java", "Practice OOP"));  //But the function makes it reusable
+
 
 
     public ArrayList<Task> findAll(){
