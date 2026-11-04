@@ -2,7 +2,7 @@ package org.elvis;
 
 import java.util.ArrayList;
 
-public class TaskRepository {
+public class InMemoryTaskRepository {
 
     private ArrayList<Task> taskList = new ArrayList<>();
 
