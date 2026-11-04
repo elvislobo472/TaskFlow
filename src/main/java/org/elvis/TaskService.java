@@ -1,22 +1,15 @@
 package org.elvis;
 
+
 import java.util.ArrayList;
 
 public class TaskService {
-    private ArrayList<Task> taskList = new ArrayList<>();
+
+    private TaskRepository taskRepository = new TaskRepository();
 
 
 
     public void addTask(Task task){
-        for (Task existingTask : taskList){
-            if(existingTask.getId() == task.getId()){
-                System.out.println("########Task with this ID already exists########");
-                System.out.println();
-                return;
-            }
-        }
-
-
         //input validation
         if(task.getTitle().isBlank() || task.getDescription().isBlank()){
             System.out.println("########Task title and Description cannot be empty########");
@@ -24,7 +17,18 @@ public class TaskService {
             return;
         }
 
-        taskList.add(task);
+
+        //Duplicate ID validation
+        for (Task existingTask : taskRepository.findAll()){
+            if(existingTask.getId() == task.getId()){
+                System.out.println("########Task with this ID already exists########");
+                System.out.println();
+                return;
+            }
+        }
+
+        //Save task through repository
+        taskRepository.save(task);
         System.out.println("********Task added successfully********");
         System.out.println();
     }
@@ -34,14 +38,16 @@ public class TaskService {
 
 
     public void displayAllTasks(){
+        ArrayList<Task> tasks = taskRepository.findAll();
 
-        if (taskList.isEmpty()){
+
+        if (tasks.isEmpty()){
             System.out.println("No tasks available.");
             System.out.println();
             return;
         }
 
-        for(Task task : taskList){
+        for(Task task : tasks){
             System.out.println("Task ID: "+ task.getId());
             System.out.println("Title: "+task.getTitle());
             System.out.println("Description: "+task.getDescription());
@@ -52,54 +58,22 @@ public class TaskService {
     }
 
 
-    public void getAndMarkCompleted(int id){
+    public void completeTask(long id){
 
-        for(Task task : taskList){
-            if(task.getId() == id){
-                task.markCompleted();
-                System.out.println("********Task marked as completed!********");
-                System.out.println();
-                return;
-            }
-        }
+        taskRepository.markCompleted(id);
+    }
 
-        System.out.println("########Task with the mentioned ID not found########");
-        System.out.println();
+
+    public void deleteTask(long id){
+        taskRepository.deleteById(id);
+
 
     }
 
 
-    public void deleteTask(int id){
-        for(Task task : taskList){
-            if(task.getId() == id){
-                taskList.remove(task);
-                System.out.println("********Task deleted successfully********");
-                System.out.println();
-                return;
-            }
-        }
+    public void updateTask(long id, String newTitle, String newDescription){
 
-        System.out.println("########Task with the mentioned ID could not be found########");
-        System.out.println();
-
-    }
-
-
-    public void updateTask(int id, String newTitle, String newDescription){
-
-        for(Task task : taskList){
-            if(task.getId() == id){
-                task.setTitle(newTitle);
-                task.setDescription(newDescription);
-
-                System.out.println("********Task details updated  successfully********");
-                System.out.println();
-                return;
-            }
-        }
-
-        System.out.println("########Task with the mentioned ID could not be found.########");
-        System.out.println();
+       taskRepository.update(id, newTitle, newDescription);
 
     }
 
