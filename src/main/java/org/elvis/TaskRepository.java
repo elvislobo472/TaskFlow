@@ -13,11 +13,11 @@ public class TaskRepository {
 
 
     public ArrayList<Task> findAll(){
-        return taskList;
-
         //this will send the reference to the existing ArrayList
         // Let's  say in main method:
         // Arraylist<Task> tasks = taskRepository.findAll();
+
+        return taskList;
     }
 
     public Task findById(long id){
