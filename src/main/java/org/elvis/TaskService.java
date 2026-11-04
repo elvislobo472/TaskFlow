@@ -33,8 +33,7 @@ public class TaskService {
         System.out.println();
     }
 
-    //Another way to do it directly
-    // taskList.add(new Task(1, "Learn Java", "Practice OOP"));  //But the function makes it reusable
+
 
 
     public void displayAllTasks(){
@@ -75,6 +74,18 @@ public class TaskService {
 
        taskRepository.update(id, newTitle, newDescription);
 
+    }
+
+
+    public void displayTaskByID(long id){
+        Task task = taskRepository.findById(id);
+
+        System.out.println("Task ID: "+ task.getId());
+        System.out.println("Title: "+task.getTitle());
+        System.out.println("Description: "+task.getDescription());
+        System.out.println("Status: " + task.isCompleted());
+        System.out.println("==============================================");
+        System.out.println();
     }
 
 
