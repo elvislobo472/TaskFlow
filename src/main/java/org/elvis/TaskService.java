@@ -63,10 +63,16 @@ public class TaskService {
     }
 
 
-    public void deleteTask(long id){
-        taskRepository.deleteById(id);
+    public void deleteTask(long id) {
+        int res = taskRepository.deleteById(id);
 
-
+        if (res == 1) {
+            System.out.println("********Task deleted successfully********");
+            System.out.println();
+        } else {
+            System.out.println("########Task with the mentioned ID could not be found########");
+            System.out.println();
+        }
     }
 
 
