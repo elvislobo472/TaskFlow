@@ -10,7 +10,7 @@ public interface TaskRepository {
 
     Task findById(long id);
 
-    void deleteById(long id);
+    int deleteById(long id);
 
     void update(long id, String newTitle, String newDescription);
 
