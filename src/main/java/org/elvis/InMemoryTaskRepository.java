@@ -2,11 +2,11 @@ package org.elvis;
 
 import java.util.ArrayList;
 
-public class InMemoryTaskRepository {
+public class InMemoryTaskRepository implements TaskRepository {
 
     private ArrayList<Task> taskList = new ArrayList<>();
 
-
+    @Override
     public void save(Task task){
         taskList.add(task);
     }
@@ -14,7 +14,7 @@ public class InMemoryTaskRepository {
     // taskList.add(new Task(1, "Learn Java", "Practice OOP"));  //But the function makes it reusable
 
 
-
+    @Override
     public ArrayList<Task> findAll(){
         //this will send the reference to the existing ArrayList
         // Let's  say in main method:
@@ -23,6 +23,8 @@ public class InMemoryTaskRepository {
         return taskList;
     }
 
+
+    @Override
     public Task findById(long id){
         for(Task task : taskList){
             if(task.getId() == id){
@@ -34,7 +36,7 @@ public class InMemoryTaskRepository {
         return null;
     }
 
-
+    @Override
     public void deleteById(long id) {
         Task task = findById(id);
 
@@ -51,7 +53,7 @@ public class InMemoryTaskRepository {
 
 
 
-
+    @Override
     public void update(long id, String newTitle, String newDescription) {
         Task task = findById(id);
 
@@ -66,8 +68,10 @@ public class InMemoryTaskRepository {
             System.out.println();
         }
     }
-    
-    
+
+
+
+    @Override
     public void markCompleted(long id){
         Task task = findById(id);
 
