@@ -37,17 +37,16 @@ public class InMemoryTaskRepository implements TaskRepository {
     }
 
     @Override
-    public void deleteById(long id) {
+    public int deleteById(long id) {
         Task task = findById(id);
 
         if (task != null) {
             taskList.remove(task);
-            return;
+            return 1;
         } else {
-           return;
+            return 0;
         }
     }
-
 
 
     @Override
