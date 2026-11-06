@@ -42,12 +42,9 @@ public class InMemoryTaskRepository implements TaskRepository {
 
         if (task != null) {
             taskList.remove(task);
-            System.out.println("********Task deleted successfully********");
-            System.out.println();
+            return;
         } else {
-
-            System.out.println("########Task with the mentioned ID could not be found########");
-            System.out.println();
+           return;
         }
     }
 
