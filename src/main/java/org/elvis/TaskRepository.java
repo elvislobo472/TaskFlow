@@ -1,0 +1,20 @@
+package org.elvis;
+
+import java.util.ArrayList;
+
+public interface TaskRepository {
+
+    void save(Task task);
+
+    ArrayList<Task> findAll();
+
+    Task findById(long id);
+
+    void deleteById(long id);
+
+    void update(long id, String newTitle, String newDescription);
+
+    void markCompleted(long id);
+
+
+}
