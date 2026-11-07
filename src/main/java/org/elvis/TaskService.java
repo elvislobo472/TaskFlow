@@ -58,8 +58,15 @@ public class TaskService {
 
 
     public void completeTask(long id){
+        int res = taskRepository.markCompleted(id);
 
-        taskRepository.markCompleted(id);
+        if(res == 1){
+            System.out.println("********Task is marked as completed successfully********");
+            System.out.println();
+        }else{
+            System.out.println("########Task with the mentioned ID could not be found########");
+            System.out.println();
+        }
     }
 
 
