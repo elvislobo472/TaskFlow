@@ -50,18 +50,15 @@ public class InMemoryTaskRepository implements TaskRepository {
 
 
     @Override
-    public void update(long id, String newTitle, String newDescription) {
+    public int update(long id, String newTitle, String newDescription) {
         Task task = findById(id);
 
         if (task != null) {
             task.setTitle(newTitle);
             task.setDescription(newDescription);
-            System.out.println("********Task details updated successfully********");
-            System.out.println();
+            return 1;
         } else {
-
-            System.out.println("########Task with the mentioned ID could not be found########");
-            System.out.println();
+            return 0;
         }
     }
 
