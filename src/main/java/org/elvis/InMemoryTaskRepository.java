@@ -68,17 +68,15 @@ public class InMemoryTaskRepository implements TaskRepository {
 
 
     @Override
-    public void markCompleted(long id){
+    public int markCompleted(long id){
         Task task = findById(id);
 
         if (task != null) {
             task.markCompleted();
-            System.out.println("********Task is marked as completed successfully********");
-            System.out.println();
+            return 1;
         } else {
+            return 0;
 
-            System.out.println("########Task with the mentioned ID could not be found########");
-            System.out.println();
         }
     }
 
