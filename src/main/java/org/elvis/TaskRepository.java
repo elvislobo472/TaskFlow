@@ -12,7 +12,7 @@ public interface TaskRepository {
 
     int deleteById(long id);
 
-    void update(long id, String newTitle, String newDescription);
+    int update(long id, String newTitle, String newDescription);
 
     int markCompleted(long id);
 
