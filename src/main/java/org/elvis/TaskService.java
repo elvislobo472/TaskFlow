@@ -85,7 +85,16 @@ public class TaskService {
 
     public void updateTask(long id, String newTitle, String newDescription){
 
-       taskRepository.update(id, newTitle, newDescription);
+       int res = taskRepository.update(id, newTitle, newDescription);
+
+        if (res == 1) {
+            System.out.println("********Task details updated successfully********");
+            System.out.println();
+        } else {
+            System.out.println("########Task with the mentioned ID could not be found########");
+            System.out.println();
+        }
+
 
     }
 
