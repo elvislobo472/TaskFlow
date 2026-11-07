@@ -14,7 +14,7 @@ public interface TaskRepository {
 
     void update(long id, String newTitle, String newDescription);
 
-    void markCompleted(long id);
+    int markCompleted(long id);
 
 
 }
