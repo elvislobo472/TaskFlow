@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class TaskService {
 
-    private InMemoryTaskRepository taskRepository = new InMemoryTaskRepository();
+    private TaskRepository taskRepository = new InMemoryTaskRepository();
 
 
 
