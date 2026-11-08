@@ -37,42 +37,42 @@ public class InMemoryTaskRepository implements TaskRepository {
     }
 
     @Override
-    public int deleteById(long id) {
+    public boolean deleteById(long id) {
         Task task = findById(id);
 
         if (task != null) {
             taskList.remove(task);
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
 
 
     @Override
-    public int update(long id, String newTitle, String newDescription) {
+    public boolean update(long id, String newTitle, String newDescription) {
         Task task = findById(id);
 
         if (task != null) {
             task.setTitle(newTitle);
             task.setDescription(newDescription);
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
 
 
 
     @Override
-    public int markCompleted(long id){
+    public boolean markCompleted(long id){
         Task task = findById(id);
 
         if (task != null) {
             task.markCompleted();
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
 
         }
     }

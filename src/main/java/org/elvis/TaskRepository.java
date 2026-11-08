@@ -10,11 +10,11 @@ public interface TaskRepository {
 
     Task findById(long id);
 
-    int deleteById(long id);
+    boolean deleteById(long id);
 
-    int update(long id, String newTitle, String newDescription);
+    boolean update(long id, String newTitle, String newDescription);
 
-    int markCompleted(long id);
+    boolean markCompleted(long id);
 
 
 }
