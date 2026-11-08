@@ -58,9 +58,9 @@ public class TaskService {
 
 
     public void completeTask(long id){
-        boolean res = taskRepository.markCompleted(id);
+        boolean completed = taskRepository.markCompleted(id);
 
-        if(res){
+        if(completed){
             System.out.println("********Task is marked as completed successfully********");
             System.out.println();
         }else{
@@ -71,9 +71,9 @@ public class TaskService {
 
 
     public void deleteTask(long id) {
-        boolean res = taskRepository.deleteById(id);
+        boolean deleted = taskRepository.deleteById(id);
 
-        if (res) {
+        if (deleted) {
             System.out.println("********Task deleted successfully********");
             System.out.println();
         } else {
@@ -85,9 +85,9 @@ public class TaskService {
 
     public void updateTask(long id, String newTitle, String newDescription){
 
-       boolean res = taskRepository.update(id, newTitle, newDescription);
+       boolean updated = taskRepository.update(id, newTitle, newDescription);
 
-        if (res) {
+        if (updated) {
             System.out.println("********Task details updated successfully********");
             System.out.println();
         } else {
