@@ -38,6 +38,8 @@ public class Main {
         taskService.displayAllTasks();
 
         taskService.addTask(new Task(4, "Github Actions", "CI/CD Pipeline"));
+        taskService.addTask(new Task(5, "Golang", "BackEnd"));
+
 
 
     }
