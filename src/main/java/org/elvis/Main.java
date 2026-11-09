@@ -8,7 +8,7 @@ public class Main {
         TaskService taskService = new TaskService();
 
         taskService.addTask(new Task(1, "Learn Python", "Lists, Tuples, Dictionary"));
-        taskService.addTask(new Task(2, "Learn Java", "Spring"));
+        taskService.addTask(new Task(2, "Learn Java", "SpringBoot"));
         taskService.addTask(new Task(3, "Learn Linux", "Shell Variables"));
 
         taskService.displayAllTasks();
