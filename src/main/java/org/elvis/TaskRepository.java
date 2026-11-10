@@ -1,12 +1,12 @@
 package org.elvis;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface TaskRepository {
 
     void save(Task task);
 
-    ArrayList<Task> findAll();
+    List<Task> findAll();
 
     Task findById(long id);
 

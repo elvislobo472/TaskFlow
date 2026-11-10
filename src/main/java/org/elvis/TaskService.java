@@ -1,7 +1,7 @@
 package org.elvis;
 
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TaskService {
 
@@ -42,7 +42,7 @@ public class TaskService {
 
 
     public void displayAllTasks(){
-        ArrayList<Task> tasks = taskRepository.findAll();
+        List<Task> tasks = taskRepository.findAll();
 
 
         if (tasks.isEmpty()){

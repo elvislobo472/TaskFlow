@@ -1,6 +1,7 @@
 package org.elvis;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InMemoryTaskRepository implements TaskRepository {
 
@@ -15,12 +16,12 @@ public class InMemoryTaskRepository implements TaskRepository {
 
 
     @Override
-    public ArrayList<Task> findAll(){
+    public List<Task> findAll(){
         //this will send the reference to the existing ArrayList
         // Let's  say in main method:
         // Arraylist<Task> tasks = taskRepository.findAll();
 
-        return taskList;
+        return new ArrayList<>(taskList);
     }
 
 
