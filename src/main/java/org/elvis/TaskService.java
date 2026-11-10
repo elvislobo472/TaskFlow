@@ -5,7 +5,12 @@ import java.util.ArrayList;
 
 public class TaskService {
 
-    private TaskRepository taskRepository = new InMemoryTaskRepository();
+    private TaskRepository taskRepository;
+
+
+    public TaskService(TaskRepository taskRepository){
+        this.taskRepository = taskRepository;
+    }
 
 
 

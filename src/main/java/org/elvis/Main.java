@@ -4,8 +4,8 @@ package org.elvis;
 public class Main {
     public static void main(String[] args) {
 
-
-        TaskService taskService = new TaskService();
+        TaskRepository repository = new InMemoryTaskRepository();
+        TaskService taskService = new TaskService(repository);  //Constructor based dependency injection
 
         taskService.addTask(new Task(1, "Learn Python", "Lists, Tuples, Dictionary"));
         taskService.addTask(new Task(2, "Learn Java", "SpringBoot"));
