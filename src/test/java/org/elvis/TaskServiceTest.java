@@ -58,7 +58,7 @@ public class TaskServiceTest {
 
 
         Task firstTask = new Task(1, "Learn Spring Boot", "Understand Dependency Injection");
-        Task secondTask = new Task(1, "Learn Java", "OOPS");
+        Task secondTask = new Task(1, "Learn Bash", "Understand Shell Variables");
 
         taskService.addTask(firstTask);
         taskService.addTask(secondTask);
