@@ -12,7 +12,7 @@ public class TaskTest {
 
         //Arrange
 
-        Task task = new Task(1, "Learn Java", "Begin with OOPS");
+        Task task = new Task(1, "Learn Python", "Begin with Lists, Tuples, Dictionary");
 
         //Assert
 
