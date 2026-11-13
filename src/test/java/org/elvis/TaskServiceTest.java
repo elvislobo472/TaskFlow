@@ -58,7 +58,7 @@ public class TaskServiceTest {
 
 
         Task firstTask = new Task(1, "Learn Spring Boot", "Understand Dependency Injection");
-        Task secondTask = new Task(1, "Learn Bash", "Understand Shell Variables");
+        Task secondTask = new Task(1, "Learn Bash", "Understand Shell Variables"); //this should fail since there's already a task with ID 1
 
         taskService.addTask(firstTask);
         taskService.addTask(secondTask);
