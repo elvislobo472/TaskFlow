@@ -42,7 +42,7 @@ public class TaskServiceTest {
         TaskService taskService = new TaskService(repository);
 
 
-        Task task = new Task(1, "Learn Spring Boot", "");
+        Task task = new Task(1, "Learn Spring Boot", ""); // Description cannot be blank therefore it fails the test
 
         taskService.addTask(task);
 
