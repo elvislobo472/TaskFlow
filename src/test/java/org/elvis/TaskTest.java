@@ -39,7 +39,7 @@ public class TaskTest {
 
     @Test
     void taskShouldHaveCorrectTitle(){
-        Task task = new Task(1, "Learn Java", "Begin with OOPS");
+        Task task = new Task(1, "Learn Java", "Begin with OOPS"); //Checking if the title is as expected
 
         assertEquals("Learn Java", task.getTitle());
 
@@ -49,7 +49,7 @@ public class TaskTest {
 
     @Test
     void taskShouldHaveCorrectDescription(){
-        Task task = new Task(1, "Learn Java", "Begin with OOPS");
+        Task task = new Task(1, "Learn Java", "Begin with OOPS"); //Checking if the  is as expected
 
         assertEquals("Begin with OOPS", task.getDescription());
 
