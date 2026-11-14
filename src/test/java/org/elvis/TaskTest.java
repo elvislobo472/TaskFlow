@@ -49,7 +49,7 @@ public class TaskTest {
 
     @Test
     void taskShouldHaveCorrectDescription(){
-        Task task = new Task(1, "Learn Java", "Begin with OOPS"); //Checking if the  is as expected
+        Task task = new Task(1, "Learn Java", "Begin with OOPS"); //Checking if the description  is as expected
 
         assertEquals("Begin with OOPS", task.getDescription());
 
