@@ -33,5 +33,15 @@ public class TaskFlowApplication {
 //4. Providing the objects wherever they are required
 
 
-//Application Context : This is Spring's IoC container interface
+//Application Context : This is Spring's IoC container interface. SpringBoot creates and configures an application context. This context manages the objects known as Spring Beans
 
+
+//Bean: It is simply an object created and managed by the Spring IoC container
+
+
+
+//1. Maven launches SpringBoot
+//2. Spring initializes the ApplicationContext
+//3. Spring Boot configures the web environment
+//4. Embedded Tomcat starts
+//5. TaskFlow(OR Any Application being developed) becomes available on port 8080
