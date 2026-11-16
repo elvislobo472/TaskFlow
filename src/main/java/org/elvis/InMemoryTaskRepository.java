@@ -3,6 +3,10 @@ package org.elvis;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
+
+@Repository //It identifies this class as persistence/data-access component and allows Spring to discover and manage it
 public class InMemoryTaskRepository implements TaskRepository {
 
     private ArrayList<Task> taskList = new ArrayList<>();
