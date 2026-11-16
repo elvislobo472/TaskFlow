@@ -4,18 +4,28 @@ package org.elvis;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication  //Annotation combines 3 annotations @SpringBootConfiguration, @EnableAutoConfiguration, @ComponentScan
 public class TaskFlowApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
+//        SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
 
         //BTS SpringBoot:
         //Creates Spring Application Context
         //Performs component Scanning
         //Configures application components
         //Starts the embedded web server when web support is present
+
+
+
+        ConfigurableApplicationContext context = SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
+
+        TaskService taskService = context.getBean(TaskService.class);
+
+        System.out.println("TaskService Bean: " + taskService);
+
 
     }
 
