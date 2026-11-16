@@ -3,6 +3,11 @@ package org.elvis;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+
+
+@Service //This annotation means that this class contains business logic
 public class TaskService {
 
     private TaskRepository taskRepository;
