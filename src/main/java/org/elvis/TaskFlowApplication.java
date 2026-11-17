@@ -10,7 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class TaskFlowApplication {
 
     public static void main(String[] args){
-//        SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
+        SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
 
         //BTS SpringBoot:
         //Creates Spring Application Context
@@ -22,9 +22,10 @@ public class TaskFlowApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(TaskFlowApplication.class, args); //This starts the SpringBoot Application
 
-        TaskService taskService = context.getBean(TaskService.class);
+        TaskService taskService1 = context.getBean(TaskService.class);
+        TaskService taskService2 = context.getBean(TaskService.class);
 
-        System.out.println("TaskService Bean: " + taskService);
+        System.out.println(taskService1 == taskService2);
 
 
     }
