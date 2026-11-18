@@ -11,7 +11,13 @@ public class TaskController {
         //Example
     @GetMapping("/hello")
     public String hello(){
-        return "Welcome to TaskFlow";
+        return "Welcome to Java";
+    }
+
+
+    @GetMapping("/info")
+    public String info(){
+        return "This is TaskFlow..The Place to manage your To-do-Lists";
     }
 
 
