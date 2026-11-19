@@ -26,15 +26,15 @@ public class TaskController {
         return "Hiii...This is Elvis!!";
     }
 
-    @GetMapping("/elvis")
-    public String elvis(){
-        return "Hiii...This is Elvis!!";
-    }
-
-    @GetMapping("/elias")
-    public String elias(){
-        return "Hiii...This is Elvis!!";
-    }
+//    @GetMapping("/elvis")
+//    public String elvis(){
+//        return "Hiii...This is Elvis!!";
+//    }
+//
+//    @GetMapping("/elias")
+//    public String elias(){
+//        return "Hiii...This is Elvis!!";
+//    }
 
     //
 }
