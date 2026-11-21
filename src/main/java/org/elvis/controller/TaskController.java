@@ -1,72 +1,47 @@
 package org.elvis.controller;
 
 
+import org.elvis.Task;
+import org.elvis.TaskService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TaskController {
 
+    private final TaskService taskService;
 
-        //Example
-    @GetMapping("/hello")
+
+    public TaskController(TaskService taskService){
+        this.taskService = taskService;
+    }
+
+
+    @GetMapping("/api/hello")
     public String hello(){
-        return "Welcome to Java";
+        return "TaskFlow API is running!";
     }
 
 
-    @GetMapping("/info")
-    public String info(){
-        return "This is TaskFlow..The Place to manage your To-do-Lists";
-    }
 
-
-    @GetMapping("/dev")
-    public String dev(){
-        return "Hiii...This is Elvis!!";
-    }
-
-//    @GetMapping("/elvis")
-//    public String elvis(){
-//        return "Hiii...This is Elvis!!";
+//        //Example
+//    @GetMapping("/hello")
+//    public String hello(){
+//        return "Welcome to Java";
 //    }
 //
-//    @GetMapping("/elias")
-//    public String elias(){
-//        return "Hiii...This is Elvis!!";
-//    }
-
-
-//    @GetMapping("/elvis")
-//    public String elvis(){
-//        return "Hiii...This is Elvis!!";
+//
+//    @GetMapping("/info")
+//    public String info(){
+//        return "This is TaskFlow..The Place to manage your To-do-Lists";
 //    }
 //
-//    @GetMapping("/elias")
-//    public String elias(){
-//        return "Hiii...This is Elvis!!";
-//    }
-
-//    @GetMapping("/elvis")
-//    public String elvis(){
-//        return "Hiii...This is Elvis!!";
-//    }
 //
-//    @GetMapping("/elias")
-//    public String elias(){
+//    @GetMapping("/dev")
+//    public String dev(){
 //        return "Hiii...This is Elvis!!";
 //    }
 
-
-//    @GetMapping("/elvis")
-//    public String elvis(){
-//        return "Hiii...This is Elvis!!";
-//    }
-//
-//    @GetMapping("/elias")
-//    public String elias(){
-//        return "Hiii...This is Elvis!!";
-//    }
 
 
     //
