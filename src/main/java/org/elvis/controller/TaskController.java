@@ -22,6 +22,18 @@ public class TaskController {
         return "TaskFlow API is running!";
     }
 
+    @GetMapping("/api/info")
+    public String info(){
+        return "This is TaskFlow..The Place to manage your To-do-Lists";
+    }
+
+    @GetMapping("/api/dev")
+    public String dev(){
+        return "Hiii...This is Elvis!!";
+    }
+
+
+
 
 
 //        //Example
