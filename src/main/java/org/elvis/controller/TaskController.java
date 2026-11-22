@@ -24,7 +24,7 @@ public class TaskController {
 
     @GetMapping("/api/info")
     public String info(){
-        return "This is TaskFlow..The Place to manage your To-do-Lists";
+        return "This is TaskFlow..Place to manage your To-do-Lists";
     }
 
 //    @GetMapping("/api/dev")
@@ -53,6 +53,7 @@ public class TaskController {
 //    public String dev(){
 //        return "Hiii...This is Elvis!!";
 //    }
+
 
 
 
