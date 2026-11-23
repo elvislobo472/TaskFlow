@@ -27,10 +27,10 @@ public class TaskController {
         return "This is TaskFlow..Place to manage your To-do-Lists";
     }
 
-//    @GetMapping("/api/dev")
-//    public String dev(){
-//        return "Hiii...This is Elvis!!";
-//    }
+    @GetMapping("/api/dev")
+    public String dev(){
+        return "Hiii...This is Elvis!!";
+    }
 
 
 
