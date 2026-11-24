@@ -38,6 +38,11 @@ public class TaskController {
         return "Let's Go MCA Pind.....Yaayyy";
     }
 
+    @GetMapping("/api/LoelSec")
+    public String LoelSec(){
+        return "This is the security page";
+    }
+
 
 
 
